@@ -15,7 +15,7 @@ public class PaperRockScissorsGame {
         printValues(arrays);
         int userChoice = getUserChoice(scanner, arrays);
         int computerChoice = getComputerChoice(arrays);
-        checkWhoWon(userChoice, computerChoice);
+        checkWinner(userChoice, computerChoice);
     }
 
     private ArrayList<String> addValues() {
@@ -46,7 +46,7 @@ public class PaperRockScissorsGame {
         return computerIndexChoice;
     }
 
-    private void checkWhoWon(int userChoice, int computerChoice) {
+    private void checkWinner(int userChoice, int computerChoice) {
         if (checkComputerWon(userChoice, computerChoice)) {
             System.out.println("Computer won.");
         } else if (checkUserWon(userChoice, computerChoice)) {
