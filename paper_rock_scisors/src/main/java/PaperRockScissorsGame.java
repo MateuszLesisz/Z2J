@@ -49,7 +49,7 @@ public class PaperRockScissorsGame {
     private void checkWhoWon(int userChoice, int computerChoice) {
         if (checkComputerWon(userChoice, computerChoice)) {
             System.out.println("Computer won.");
-        } else if (CheckUserWon(userChoice, computerChoice)) {
+        } else if (checkUserWon(userChoice, computerChoice)) {
             System.out.println("User won.");
         } else {
             System.out.println("Draw.");
@@ -58,7 +58,7 @@ public class PaperRockScissorsGame {
     private boolean checkComputerWon(int userChoice, int computerChoice) {
         return userChoice == 0 && computerChoice == 2 || userChoice == 1 && computerChoice == 0 || userChoice == 2 && computerChoice == 1;
     }
-    private boolean CheckUserWon(int userChoice, int computerChoice) {
+    private boolean checkUserWon(int userChoice, int computerChoice) {
         return userChoice == 2 && computerChoice == 0 || userChoice == 0 && computerChoice == 1 || userChoice == 1 && computerChoice == 2;
     }
 }
